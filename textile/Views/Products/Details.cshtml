@@ -1,0 +1,42 @@
+@model textile.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Productname)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Productname)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Materialtype)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Materialtype)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pricepermeter)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pricepermeter)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Supplier)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Supplier.Supplierid)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Productid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
